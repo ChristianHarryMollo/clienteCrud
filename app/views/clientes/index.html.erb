@@ -1,0 +1,26 @@
+<h1> Listado de clientes </h1>
+<%= link_to "Crear cliente", clientes_new_path %>
+<table>
+    <tr>
+        <thead>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Numero de telefono</th>
+        </thead>
+    </tr>
+
+    <% @cliente.each do |t| %>
+    <tr>
+
+        <td><%= t.nombre %></td>
+        <td><%= t.direccion %></td>
+        <td><%= t.ntelefono %></td>
+
+        <td>
+            <%= link_to "Editar", edit_cliente_path(t) %>
+            <%= link_to "Eliminar", t, method: :delete, data: 
+            { confirm: "deseas eliminar este articulo?"} %>
+        </td>
+    </tr>
+    <% end%>
+</tables>

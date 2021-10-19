@@ -1,0 +1,17 @@
+<%= form_for @cliente do |f| %>
+    <div>
+      <%= f.label :nombre %>
+      <%= f.text_field :nombre %>
+    </div>
+    <div>
+      <%= f.label :direccion %>
+      <%= f.text_area :direccion %>
+    </div>
+    <div>
+      <%= f.label :ntelefono %>
+      <%= f.number_field :ntelefono %>
+    </div>
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
